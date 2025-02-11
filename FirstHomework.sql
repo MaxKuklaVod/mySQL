@@ -29,3 +29,13 @@ SELECT name, phone FROM `clients` WHERE lastname = "Brown";
 SELECT name, phone FROM `clients` WHERE lastname = "Miller";
 -- д) по всем этим значениям в одном запросе
 SELECT name, phone FROM `clients` WHERE lastname in ("Williams", "Jones", "Brown", "Miller");
+
+-- 4) Поиск даты рождения и пола пользователя по имени или фамилии
+-- а) Kelly
+SELECT dbirth, gender FROM `clients` WHERE name = "Kelly" or lastname = "Kelly";
+-- б) Thomas
+SELECT dbirth, gender FROM `clients` WHERE name = "Thomas" or lastname = "Thomas";
+-- в) Clark
+SELECT dbirth, gender FROM `clients` WHERE name = "Clark" or lastname = "Clark";
+-- г) Joseph
+SELECT dbirth, gender FROM `clients` WHERE name = "Joseph" or lastname = "Joseph";
